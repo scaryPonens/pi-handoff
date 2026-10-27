@@ -1,0 +1,22 @@
+{
+  "name": "pi-handoff",
+  "version": "0.1.0",
+  "description": "In-place /handoff compaction for the Pi coding agent",
+  "license": "MIT",
+  "type": "module",
+  "keywords": ["pi-package"],
+  "engines": {
+    "node": ">=22"
+  },
+  "pi": {
+    "extensions": ["./extensions/handoff/index.ts"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test extensions/handoff/*.test.ts"
+  }
+}
